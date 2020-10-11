@@ -19,23 +19,11 @@ if (arg2 === 'create') {
 }
 
 if (arg2 === 'delete') {
-  switch (arg3) {
-    case arg3:
-      delete data.notes[arg3];
-      break;
-    default:
-      break;
-  }
+  delete data.notes[arg3];
 }
 
 if (arg2 === 'update') {
-  switch (arg3) {
-    case arg3:
-      data.notes[arg3] = arg4;
-      break;
-    default:
-      break;
-  }
+  data.notes[arg3] = arg4;
 }
 
 const newData = JSON.stringify(data, null, 2);
