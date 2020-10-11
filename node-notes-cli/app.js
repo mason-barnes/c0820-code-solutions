@@ -20,20 +20,8 @@ if (arg2 === 'create') {
 
 if (arg2 === 'delete') {
   switch (arg3) {
-    case '1':
-      delete data.notes[1];
-      break;
-    case '2':
-      delete data.notes[2];
-      break;
-    case '3':
-      delete data.notes[3];
-      break;
-    case '4':
-      delete data.notes[4];
-      break;
-    case '5':
-      delete data.notes[5];
+    case arg3:
+      delete data.notes[arg3];
       break;
     default:
       break;
@@ -42,20 +30,8 @@ if (arg2 === 'delete') {
 
 if (arg2 === 'update') {
   switch (arg3) {
-    case '1':
-      data.notes[1] = arg4;
-      break;
-    case '2':
-      data.notes[2] = arg4;
-      break;
-    case '3':
-      data.notes[3] = arg4;
-      break;
-    case '4':
-      data.notes[4] = arg4;
-      break;
-    case '5':
-      data.notes[5] = arg4;
+    case arg3:
+      data.notes[arg3] = arg4;
       break;
     default:
       break;
