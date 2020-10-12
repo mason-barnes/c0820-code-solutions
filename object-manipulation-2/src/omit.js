@@ -2,9 +2,8 @@
 function omit(source, keys) {
   const result = {};
   for (let i = 0; i < keys.length; i++) {
-    console.log(keys.length);
-    if (source[keys[i]] !== keys[i]) {
-      result[keys[i]] = source[keys[i]];
+    if (keys[i] !== result[i]) {
+      result[source[i]];
     }
   }
   return result;
