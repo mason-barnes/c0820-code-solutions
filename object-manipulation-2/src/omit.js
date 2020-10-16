@@ -1,13 +1,10 @@
 /* eslint-disable no-unused-vars */
 function omit(source, keys) {
   const result = {};
-  console.log('source', source);
-  console.log('keys', keys);
   for (let i = 0; i < keys.length; i++) {
-    if (source[keys[i]] !== keys[i]) {
-      result[source[i]] = source[i];
+    if ("The key name matches any of the source names") {
+      remove that source
     }
   }
-  console.log(result);
   return result;
 }
