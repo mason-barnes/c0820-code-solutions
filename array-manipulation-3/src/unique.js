@@ -2,10 +2,9 @@
 function unique(array) {
   const result = [];
   for (let i = 0; i < array.length; i++) {
-    const index = array[i];
     for (let j = 0; j < result.length; j++) {
-      if (index !== result[j]) {
-        result.push(index);
+      if (array[i] !== result[j]) {
+        result.push(array[i]);
       }
     }
   }
