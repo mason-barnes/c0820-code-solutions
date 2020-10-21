@@ -11,11 +11,11 @@ const pokedex = [
 
 const element = (
   <ul>
-    <li>{pokedex[0].name}</li>
-    <li>{pokedex[1].name}</li>
-    <li>{pokedex[2].name}</li>
-    <li>{pokedex[3].name}</li>
-    <li>{pokedex[4].name}</li>
+    {
+      pokedex.map(pokemon => {
+        return <li key={pokemon.number}>{pokemon.name}</li>;
+      })
+    }
   </ul>
 );
 
