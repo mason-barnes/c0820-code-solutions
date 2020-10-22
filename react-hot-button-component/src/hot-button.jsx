@@ -11,8 +11,6 @@ export default class HotButton extends React.Component {
 
   handleClick() {
     this.setState({ clickCount: this.state.clickCount + 1 });
-    // eslint-disable-next-line no-console
-    console.log('clicked', this.state.clickCount);
   }
 
   render() {
