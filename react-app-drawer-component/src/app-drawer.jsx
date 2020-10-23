@@ -30,9 +30,9 @@ export default class AppDrawer extends React.Component {
           <div className="container">
             <h1 className="menu-title" onClick={this.handleClick}>Menu</h1>
             <div>
-              <h2>About</h2>
-              <h2>Get Started</h2>
-              <h2>Sign In</h2>
+              <h2 onClick={this.handleClick}>About</h2>
+              <h2 onClick={this.handleClick}>Get Started</h2>
+              <h2 onClick={this.handleClick}>Sign In</h2>
             </div>
           </div>
           <div className="gray-area">
