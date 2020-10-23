@@ -28,7 +28,7 @@ export default class AppDrawer extends React.Component {
       return (
         <div className="flex-row">
           <div className="container">
-            <h1 className="menu-title" onClick={this.handleClick}>Menu</h1>
+            <h1 className="menu-title">Menu</h1>
             <div>
               <h2 onClick={this.handleClick}>About</h2>
               <h2 onClick={this.handleClick}>Get Started</h2>
