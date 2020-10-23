@@ -35,7 +35,7 @@ export default class AppDrawer extends React.Component {
               <h2 onClick={this.handleClick}>Sign In</h2>
             </div>
           </div>
-          <div className="gray-area">
+          <div className="gray-area" onClick={this.handleClick}>
 
           </div>
         </div>

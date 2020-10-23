@@ -9,7 +9,8 @@
 }
 
 .menu-icon:hover,
-.menu-title:hover {
+.menu-title:hover,
+h2 {
   cursor: pointer;
 }
 
