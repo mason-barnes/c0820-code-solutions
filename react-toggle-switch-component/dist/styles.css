@@ -6,6 +6,14 @@
   position: relative;
 }
 
+.container-on {
+  background-color: lime;
+  border-radius: 50px;
+  height: 100px;
+  width: 200px;
+  position: relative;
+}
+
 .off-button {
   background-color: black;
   border-radius: 50px;

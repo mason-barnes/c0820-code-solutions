@@ -20,21 +20,21 @@ export default class ToggleSwitch extends React.Component {
   render() {
     if (this.state.isSwitchOn === false) {
       return (
-        <React.Fragment>
+        <div className="container">
           <div className="off-button" onClick={this.handleClick}></div>
           <div className="off-text">
             <h1>Off</h1>
           </div>
-        </React.Fragment>
+        </div>
       );
     } else {
       return (
-        <React.Fragment>
+        <div className="container-on">
           <div className="on-button" onClick={this.handleClick}></div>
           <div className="on-text">
             <h1>On</h1>
           </div>
-        </React.Fragment>
+        </div>
       );
     }
   }
