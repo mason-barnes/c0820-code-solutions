@@ -16,7 +16,8 @@ class StopWatch extends React.Component {
 
   handleClick() {
     if (this.state.time === 0) {
-      setInterval(this.setState(addTime(), 1000);
+      setInterval(this.setState(addTime()), 1000);
+      // eslint-disable-next-line no-console
       console.log(this.state.time);
     } else {
       this.setState({ time: 0 });
