@@ -1,0 +1,30 @@
+.container {
+  background-color: tomato;
+  border-radius: 50px;
+  height: 100px;
+  width: 200px;
+  position: relative;
+}
+
+.off-button {
+  background-color: black;
+  border-radius: 50px;
+  height: 100%;
+  width: 50%;
+  position: absolute;
+}
+
+.on-button {
+  background-color: black;
+  border-radius: 50px;
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  left: 50%;
+}
+
+.off-text,
+.on-text {
+  padding-top: 100px;
+  text-align: center;
+}
