@@ -29,7 +29,9 @@ class StopWatch extends React.Component {
   }
 
   clearHandleClick() {
-    this.setState({ time: 0 });
+    if (this.state.playClick === false) {
+      this.setState({ time: 0 });
+    }
   }
 
   render() {
