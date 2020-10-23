@@ -1,40 +1,47 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-function addTime() {
-  return this.state.time + 1;
-}
-
 class StopWatch extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      time: 0
+      time: 0,
+      playClick: false,
+      pauseClick: true
     };
-    this.handleClick = this.handleClick.bind(this);
+    this.playHandleClick = this.playHandleClick.bind(this);
+    this.pauseHandleClick = this.pauseHandleClick.bind(this);
+    this.clearHandleClick = this.clearHandleClick.bind(this);
   }
 
-  handleClick() {
-    if (this.state.time === 0) {
-      setInterval(this.setState(addTime()), 1000);
-      // eslint-disable-next-line no-console
-      console.log(this.state.time);
-    } else {
-      this.setState({ time: 0 });
-      console.log('Fuck you');
-    }
+  playHandleClick() {
+    this.setState({ playClick: true, pauseClick: false });
+    this.intervalId = setInterval(() => {
+      this.setState({
+        time: this.state.time + 1
+      });
+    }, 1000);
+  }
+
+  pauseHandleClick() {
+    clearInterval(this.intervalId);
+    this.setState({ playClick: false, pauseClick: true });
+  }
+
+  clearHandleClick() {
+    this.setState({ time: 0 });
   }
 
   render() {
-    if (this.state.time === 0) {
+    if (this.state.playClick === false) {
       return (
         <div>
-          <div className="circle">
+          <div className="circle" onClick={this.clearHandleClick}>
             <div className="time">
               <h1>{this.state.time}</h1>
             </div>
           </div>
-          <div id="play" className="play-button" onClick={this.handleClick}>
+          <div className="play-button" onClick={this.playHandleClick}>
             <h1>&#9654;</h1>
           </div>
         </div>
@@ -42,12 +49,12 @@ class StopWatch extends React.Component {
     } else {
       return (
         <div>
-          <div className="circle">
+          <div className="circle" onClick={this.clearHandleClick}>
             <div className="time">
               <h1>{this.state.time}</h1>
             </div>
           </div>
-          <div id="pause" className="pause-button" onClick={this.handleClick}>
+          <div className="pause-button" onClick={this.pauseHandleClick}>
             <h1>||</h1>
           </div>
         </div>
