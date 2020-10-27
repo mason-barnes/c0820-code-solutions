@@ -1,0 +1,23 @@
+.circle {
+  height: 100px;
+  width: 100px;
+  border: 3px solid black;
+  border-radius: 50px;
+  position: relative;
+}
+
+.time {
+  position: absolute;
+  left: 40px;
+  top: 10px;
+}
+
+.play-button, .pause-button {
+  width: 20px;
+  height: auto;
+  margin-left: 40px;
+}
+
+.play-button:hover, .pause-button:hover {
+  cursor: pointer;
+}
