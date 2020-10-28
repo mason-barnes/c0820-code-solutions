@@ -1,14 +1,12 @@
 /* eslint-disable no-unused-vars */
 function zip(first, second) {
   const result = [];
-  let length = first.length;
-  if (length > second.length) {
-    length = second.length;
-  }
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i < first.length; i++) {
     const array = [];
-    array.push(first[i], second[i]);
-    result.push(array);
+    if (first[i] && second[i]) {
+      array.push(first[i], second[i]);
+      result.push(array);
+    }
   }
   return result;
 }

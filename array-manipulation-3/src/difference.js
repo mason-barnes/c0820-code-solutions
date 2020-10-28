@@ -1,13 +1,14 @@
 /* eslint-disable no-unused-vars */
 function difference(first, second) {
   const result = [];
-  let longestArray = first;
-  if (longestArray.length < second.length) {
-    longestArray = second;
-  }
-  for (let i = 0; i < longestArray.length; i++) {
-    if (!first.includes(second[i])) {
+  for (let i = 0; i < first.length; i++) {
+    if (!second.includes(first[i])) {
       result.push(first[i]);
+    }
+  }
+  for (let i = 0; i < second.length; i++) {
+    if (!first.includes(second[i])) {
+      result.push(second[i]);
     }
   }
   return result;
