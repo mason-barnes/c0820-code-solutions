@@ -1,0 +1,28 @@
+.menu-button {
+  width: 40px;
+  height: 40px;
+}
+
+.menu-title {
+  width: 25%;
+  display: flex;
+}
+
+.menu-icon:hover,
+.menu-title:hover,
+h2 {
+  cursor: pointer;
+}
+
+.gray-area {
+  border: 2px solid black;
+  height: auto;
+  width: 75%;
+  background-color: gray;
+}
+
+.flex-row {
+  height: 97vh;
+  display: flex;
+  flex-direction: row;
+}
