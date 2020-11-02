@@ -54,13 +54,8 @@ app.put('/api/grades/:gradeId', (req, res, next) => {
   } else if (req.body.grade <= 0 || req.body.grade > 100) {
     return res.status(400).send({ error: 'grade must be a positive integer 1-100' });
   } else {
-    const sql = `
-      update "grades"
-      set "grade" = ${req.body.grade}
-      where "gradeId" = ${req.params.gradeId}
-      returning *
-      `;
-    db.query(sql)
+    const text = `UPDATE "grades" SET "grade" = ${req.body.grade} WHERE "gradeId" = ${req.params.gradeId} RETURNING *`;
+    db.query(text)
       .then(result => {
         if (result.rows[0] === undefined) {
           return res.status(404).send({ error: 'gradeId does not exist in database' });
@@ -81,12 +76,13 @@ app.delete('/api/grades/:gradeId', (req, res, next) => {
   if (req.params.gradeId <= 0) {
     return res.status(400).send({ error: 'gradeId must be a positive integer' });
   } else {
-    const sql = `
-      delete from "grades"
-      where "gradeId" = ${req.params.gradeId}
-      returning *
-      `;
-    db.query(sql)
+    const text = `DELETE FROM "grades" WHERE "gradeId" = ${req.params.gradeId} RETURNING *`;
+    // const sql = `
+    //   delete from "grades"
+    //   where "gradeId" = ${req.params.gradeId}
+    //   returning *
+    //   `;
+    db.query(text)
       .then(result => {
         if (result.rows[0] === undefined) {
           return res.status(404).send({ error: 'gradeId does not exist in database' });
